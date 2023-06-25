@@ -67,8 +67,11 @@ body{ /*general*/
 }
 /* logo de la pagina de eidos*/
 .logo{
-    width: 75px;
+    width: 65px;
     height: 30px;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
 }
 /*imagenes de redes sociales*/
 .redesSociales li a img{
@@ -81,11 +84,11 @@ header .menuPrincipal ul{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 3.5%;
+    padding: 2%;
 }
 /*barra de navegación*/
-header .menuPrincipal{
-    width: 100%;
+header{
+    width: 98%;
     height: 90px;
     display: flex;
     flex-direction: row;
@@ -99,7 +102,7 @@ header .menuPrincipal{
 }
 
 li{
-    padding: 3.5%;
+    padding: 2%;
 }
 /*foto de la pagina*/
 figure img{    
@@ -122,8 +125,8 @@ figure{
 #inicio article .botonCv{
     background-color:#af599e;
     margin: auto;
-    width: 220px;
-    height: 30px;
+    width: 280px;
+    height: 50px;
     border-radius: 10rem;
     color: #f9f6f8;
     display: flex;
@@ -183,3 +186,181 @@ figure{
 .formularioGeneral form h2{
     text-align: center;
 }
+/*le agregamos un efecto al botones*/
+.menuPrincipal ul li a{
+    display: inline-block;
+    padding: 10px;
+    transition: box-shadow o.3s ease;
+
+}
+.menuPrincipal ul li:hover{
+    box-shadow: 0 0 5px 2px rgba(57, 174, 221, 0.5);
+    background-color: rgba(57, 174, 221, 0.5);;
+}
+.menuPrincipal ul li:hover a{
+    box-shadow: none;
+}
+.botonCv{
+    display: inline-block;
+    padding: 10px;
+    transition: box-shadow o.3s ease;
+}
+.botonCv:hover {
+    box-shadow: 0 0 10px 5px rgba(57, 174, 221, 0.5);
+    background-color: rgba(57, 174, 221, 0.5);
+
+}
+#listaDeProyectos{
+    min-height: 100vh;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 20px;
+ }
+ /* boton de descargar del cv en PDF*/
+ #listaDeProyectos article .botonCv{
+     background-color:#af599e;
+     margin: auto;
+     width: 280px;
+     height: 50px;
+     border-radius: 10rem;
+     color: #f9f6f8;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 20px;
+     margin-top: 5%;
+ }
+ #listaDeProyectos .tituloPrincipal{
+     font-size: 36px;
+     padding: 3%;
+ }
+ #listaDeProyectos article{
+     margin-top: 3%;
+ }
+
+ /*menu hamburguesa*/
+ .menuPrincipal .menu{ /*el oculta el menu*/ 
+    display: none;
+  }
+ 
+  .hamburguesa {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .linea {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin-bottom: 5px;
+  }
+  
+
+  .menuPrincipal .menu.mostrar {
+    display: block; /* Muestra el menú al tener la clase "mostrar" */
+  }
+  /* Estilos para el menú hamburguesa en dispositivos móviles */
+.menuPrincipal .menu {
+    display: none; /* Oculta el menú por defecto en dispositivos móviles */
+  }
+  
+  @media screen and (max-width: 800px) {
+    /* Mostrar el menú hamburguesa solo en dispositivos móviles con un ancho máximo de 800px */
+    .menuPrincipal .menu.mostrar {
+      display: block; /* Muestra el menú al tener la clase "mostrar" */
+      
+    }
+   
+  }
+/*media query desktop*/
+@media screen and (min-width: 1024px) {
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    #inicio{
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .foto{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: 3rem;
+        margin-left: 5rem;
+    }
+    .articuloPrincipal{
+        width: 100%;
+        padding-left: 8rem;
+        padding-right: 5rem;
+        text-align: left;
+
+    }
+    .botonCv{
+      float:left;
+     
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+    }
+    /*.menuPrincipal ul{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;  
+    }*/
+    #contacto .hablemos{
+        width: 70%;
+        padding: 3%;
+    }
+    #contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hamburguesa{
+        display: none;
+    }
+.menuPrincipal .menu{
+    display: inline;
+    display: flex; /* Cambia la visualización a flexbox */
+    flex-direction: row; /* Muestra los elementos en una sola fila */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+
+#listaDeProyectos{ 
+  margin: 5em 1.5em 1.5em 2.7em;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.listaDeProyectos{
+    margin-top: 8rem;
+    text-align: center;
+
+}
+.proyectos{
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #000 solid 2px;
+    text-align: justify;
+}
+
+    }

@@ -1,0 +1,16 @@
+.menuPrincipal ul {
+    display: none; /* Oculta la lista del menú */
+  }
+  
+  .hamburguesa {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .linea {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin-bottom: 5px;
+  }

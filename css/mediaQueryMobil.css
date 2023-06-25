@@ -1,0 +1,188 @@
+/* media query mobil y table */
+@media screen and (min-width: 200px) and (max-width: 728px) {
+/* Fonts */
+/* Importar aquí la font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+    
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main { 
+    max-width: 728px;
+    margin: auto;
+    line-height: 1.5;
+    justify-content: space-between;
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
+
+
+body{ /*general*/
+    font-size: 18px;
+
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+/* logo de la pagina de eidos*/
+.logo{
+    width: 75px;
+    height: 30px;
+}
+/*imagenes de redes sociales*/
+.redesSociales li a img{
+    width: 35px;
+    height: 35px;
+}
+/*barra de navegación displey flex*/
+header .menuPrincipal ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5%;
+}
+/*barra de navegación*/
+header .menuPrincipal{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    border-bottom: 2px #000000 solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+li{
+    padding: 3.5%;
+}
+/*foto de la pagina*/
+figure img{    
+    width: 300px;
+    height: 300px;
+    border-radius: 50%
+}
+figure{
+    display: flex;
+    justify-content: center;
+}
+/* inicio de con el logo de EIDOS*/
+#inicio{
+   min-height: 100vh;
+   text-align: center;
+   margin-top: 8rem;
+   margin-bottom: 20px;
+}
+/* boton de descargar del cv en PDF*/
+#inicio article .botonCv{
+    background-color:#af599e;
+    margin: auto;
+    width: 220px;
+    height: 30px;
+    border-radius: 10rem;
+    color: #f9f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 5%;
+}
+#inicio .tituloPrincipal{
+    font-size: 36px;
+    padding: 3%;
+}
+#inicio article{
+    margin-top: 3%;
+}
+/* seccion de contacto*/
+#contacto{
+    margin-top: 25rem;
+}
+#contacto article{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(175, 89, 158, 0.3);
+    color:  #0f0f0f;
+    border-radius: 10px;
+    padding: 3%;
+}
+#contacto article .tituloSecundario{
+    font-size: 28px;
+    padding: 2%;
+    text-align: center;
+}
+/* iconos de redes sociales*/
+.redesSociales{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 3%;
+}
+/*pie de pagina codigo latam*/
+.pieDePaginas{
+    background-color: #af599e;
+    width: 100%;
+    padding: 5%;
+    color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+/* formulario de contacto utilizado de mi correo jgmail*/
+.formularioGeneral{
+    width: 110%;
+    margin-top: 10rem;
+    border: #000000 solid 2px;
+}
+.formularioGeneral form h2{
+    text-align: center;
+ }
+}
+
