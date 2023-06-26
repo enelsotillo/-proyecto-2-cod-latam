@@ -108,19 +108,35 @@ li{
 figure img{    
     width: 300px;
     height: 300px;
-    border-radius: 50%
+    border-radius: 50%;
+    
 }
-figure{
+/*figure{
     display: flex;
     justify-content: center;
 }
+*/
 /* inicio de con el logo de EIDOS*/
+section#inicio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    min-height: 100vh; 
+    padding-top: 120px;
+    text-align: center;
+}
+
+/*
 #inicio{
    min-height: 100vh;
    text-align: center;
    margin-top: 8rem;
    margin-bottom: 20px;
+   padding-top: 120px;
 }
+*/
 /* boton de descargar del cv en PDF*/
 #inicio article .botonCv{
     background-color:#af599e;
@@ -141,6 +157,9 @@ figure{
 }
 #inicio article{
     margin-top: 3%;
+}
+section#inicio{
+    justify-content: space-around;
 }
 /* seccion de contacto*/
 #contacto{
@@ -265,8 +284,8 @@ figure{
     display: none; /* Oculta el menú por defecto en dispositivos móviles */
   }
   
-  @media screen and (max-width: 800px) {
-    /* Mostrar el menú hamburguesa solo en dispositivos móviles con un ancho máximo de 800px */
+  @media screen and (max-width: 720px) {
+    /* Mostrar el menú hamburguesa solo en dispositivos móviles con un ancho máximo de 720px */
     .menuPrincipal .menu.mostrar {
       display: block; /* Muestra el menú al tener la clase "mostrar" */
       
@@ -274,19 +293,30 @@ figure{
    
   }
 /*media query desktop*/
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     h1{
         font-size: 48px;
+        text-align: left;
     }
     h2{
         font-size: 32px;
     }
-    #inicio{
-        padding: 5px;
+    section#inicio{
+        /*padding: 5px;
         display: flex;
-        justify-content: center;
+        justify-content: center;*/
         flex-direction: row;
+        
     }
+    figure img{    
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+    }
+    section{
+        text-align: left;
+    }
+    /*
     .foto{
         display: flex;
         justify-content: center;
@@ -294,17 +324,20 @@ figure{
         margin-top: 3rem;
         margin-left: 5rem;
     }
+    */
     .articuloPrincipal{
-        width: 100%;
-        padding-left: 8rem;
-        padding-right: 5rem;
+        width: 50%;
+        /*padding-left: 8rem;
+        padding-right: 5rem;*/
         text-align: left;
 
     }
+    /*
     .botonCv{
       float:left;
-     
     }
+    */
+    /*
     header{
         display: flex;
         justify-content: space-between;
@@ -312,11 +345,13 @@ figure{
         margin-top: 0.5rem;
         margin-left: 0.5rem;
     }
+    */
     /*.menuPrincipal ul{
     display: flex;
     justify-content: flex-end;
     flex-direction: row;  
     }*/
+    /*
     #contacto .hablemos{
         width: 70%;
         padding: 3%;
@@ -328,6 +363,7 @@ figure{
         justify-content: center;
         text-align: center;
     }
+    */
     .hamburguesa{
         display: none;
     }
@@ -338,7 +374,6 @@ figure{
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
 }
-
 
 #listaDeProyectos{ 
   margin: 5em 1.5em 1.5em 2.7em;
