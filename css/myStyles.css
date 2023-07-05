@@ -57,8 +57,8 @@ main {
 *    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
 */
 
-
-body{ /*general*/
+/*general*/
+body{ 
     font-size: 18px;
     background-color: #fbfbfb;
     font-family: 'Lato', sans-serif;
@@ -92,9 +92,9 @@ header{
     height: 90px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 2%;
+    padding: 2 5%;
     border-bottom: 2px #000000 solid;
     position: fixed;
     top: 0;
@@ -206,35 +206,18 @@ section#inicio{
     text-align: center;
 }
 /*le agregamos un efecto al botones*/
-.menuPrincipal ul li a{
-    display: inline-block;
-    padding: 10px;
-    transition: box-shadow o.3s ease;
 
+li.menu-item a{
+    display: inline-block;
+    padding: 16px;
+    transition: box-shadow o.3s ease;
 }
-.menuPrincipal ul li:hover{
+li.menu-item:hover, li.menu-item a.active, a.botonCv:hover{
     box-shadow: 0 0 5px 2px rgba(57, 174, 221, 0.5);
     background-color: rgba(57, 174, 221, 0.5);;
+    transition:  background-color 0.3s;
 }
-.menuPrincipal ul li:hover a{
-    box-shadow: none;
-}
-.botonCv{
-    display: inline-block;
-    padding: 10px;
-    transition: box-shadow o.3s ease;
-}
-.botonCv:hover {
-    box-shadow: 0 0 10px 5px rgba(57, 174, 221, 0.5);
-    background-color: rgba(57, 174, 221, 0.5);
 
-}
-#listaDeProyectos{
-    min-height: 100vh;
-    text-align: center;
-    margin-top: 8rem;
-    margin-bottom: 20px;
- }
  /* boton de descargar del cv en PDF*/
  #listaDeProyectos article .botonCv{
      background-color:#af599e;
@@ -256,42 +239,40 @@ section#inicio{
  #listaDeProyectos article{
      margin-top: 3%;
  }
-
+.proyectosDesarrollados{
+    margin-top: 6rem
+}
  /*menu hamburguesa*/
  .menuPrincipal .menu{ /*el oculta el menu*/ 
     display: none;
   }
  
-  .hamburguesa {
+  #hamburguesa {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
   }
   
-  .linea {
+  .linea { /* las lineas en el menu */
     width: 25px;
     height: 3px;
     background-color: #000;
     margin-bottom: 5px;
   }
-  
 
-  .menuPrincipal .menu.mostrar {
-    display: block; /* Muestra el menú al tener la clase "mostrar" */
-  }
-  /* Estilos para el menú hamburguesa en dispositivos móviles */
-.menuPrincipal .menu {
-    display: none; /* Oculta el menú por defecto en dispositivos móviles */
-  }
-  
-  @media screen and (max-width: 720px) {
-    /* Mostrar el menú hamburguesa solo en dispositivos móviles con un ancho máximo de 720px */
+    .menuPrincipal.menu.ocultar {
+        display: none; /* Oculta el menú por defecto en dispositivos móviles */
+      }
+     
+  @media screen and (max-width: 800px) {
+    /* Mostrar el menú hamburguesa solo en dispositivos móviles y table ancho máximo de 720px */
     .menuPrincipal .menu.mostrar {
       display: block; /* Muestra el menú al tener la clase "mostrar" */
       
     }
-   
+    
   }
+  
 /*media query desktop*/
 @media (min-width: 1024px) {
     h1{
@@ -302,12 +283,12 @@ section#inicio{
         font-size: 32px;
     }
     section#inicio{
-        /*padding: 5px;
-        display: flex;
-        justify-content: center;*/
         flex-direction: row;
-        
     }
+    #inicio article span.articuloPrincipalBoton{
+       display: inline-block 
+      }
+
     figure img{    
         width: 400px;
         height: 400px;
@@ -316,55 +297,16 @@ section#inicio{
     section{
         text-align: left;
     }
-    /*
-    .foto{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        margin-top: 3rem;
-        margin-left: 5rem;
-    }
-    */
     .articuloPrincipal{
         width: 50%;
-        /*padding-left: 8rem;
-        padding-right: 5rem;*/
         text-align: left;
 
     }
-    /*
-    .botonCv{
-      float:left;
+    section#contacto article.hablemos{
+        width: 70%; /* 70 reducir el elemento hablemos son segun consigna%*/
+        margin: 0 auto; /* para centrar arriba 0 y bajo 0 deracha y izquierda auto*/
     }
-    */
-    /*
-    header{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        margin-top: 0.5rem;
-        margin-left: 0.5rem;
-    }
-    */
-    /*.menuPrincipal ul{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;  
-    }*/
-    /*
-    #contacto .hablemos{
-        width: 70%;
-        padding: 3%;
-    }
-    #contacto{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    */
-    .hamburguesa{
+    #hamburguesa{
         display: none;
     }
 .menuPrincipal .menu{
@@ -373,8 +315,10 @@ section#inicio{
     flex-direction: row; /* Muestra los elementos en una sola fila */
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
+    scroll-behavior: smooth;
 }
 
+/* utilizo las grid o grillas*/
 #listaDeProyectos{ 
   margin: 5em 1.5em 1.5em 2.7em;
   display: grid;

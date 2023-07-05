@@ -8,20 +8,25 @@
     <title>Enel Sotillo</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/MyStyles.css">
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
     <script src="https://kit.fontawesome.com/e74ed8ddff.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
+        <a href="/index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
         <nav class="menuPrincipal">
-            <a href="/index.html"><img class="logo" src="./img/eidoslogo.png" alt="logo"></a>
-            <ul id="oculto" style="display: none;">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#">Proyectos</a></li>
+            <div id="hamburguesa">
+              <div class="linea"></div>
+              <div class="linea"></div>
+              <div class="linea"></div>
+            </div>
+            <ul class="menu">
+              <li class="menu-item"><a href="#inicio" class="active">Inicio</a></li>
+              <li class="menu-item"><a href="#contacto">Contacto</a></li>
+              <li class="menu-item"><a href="proyectos.html">Proyectos</a></li>
             </ul>
-        </nav>
+          </nav>
     </header>
     <!--FORMULARIO DE CONTACTO-->
     <main>
@@ -62,12 +67,12 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-<script src="./js/formulario.js"></script>
-<script src="./js/cerrarPaginaAnterior.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/formulario.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script type="text/javascript">
-    emailjs.init('ncicjgPlvD8Xbj4Ka')
+  emailjs.init('ncicjgPlvD8Xbj4Ka')
 </script>
-
+<script src="js/main.js"></script>
 </html>

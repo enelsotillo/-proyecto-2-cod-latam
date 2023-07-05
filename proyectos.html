@@ -10,23 +10,23 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/MyStyles.css">
     <!--<link rel="stylesheet" href="css/mediaQueryMobil.css"> -->
-    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <script src="https://kit.fontawesome.com/e74ed8ddff.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <a href="/index.html"><img class="logo" src="./img/logo.png" alt="logo"></a>
+        <a href="/index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
         <nav class="menuPrincipal">
-            <div class="hamburguesa">
+            <div id="hamburguesa">
               <div class="linea"></div>
               <div class="linea"></div>
               <div class="linea"></div>
             </div>
             <ul class="menu">
-              <li><a href="#inicio">Inicio</a></li>
-              <li><a href="#contacto">Contacto</a></li>
-              <li><a href="#">Proyectos</a></li>
+              <li class="menu-item"><a href="index.html" class="active">Inicio</a></li>
+              <li class="menu-item"><a href="#contacto">Contacto</a></li>
+              <li class="menu-item"><a href="proyectos.html">Proyectos</a></li>
             </ul>
           </nav>
     </header>
@@ -43,7 +43,7 @@
                 </p>
 
                 <span class="articuloPrincipal1">
-                    <a class="botonCv" href="archivos/CvEnelSotillo.pdf" download>Descarga CV</a>
+                    <a class="botonCv" href="archivos/CvEnelSotillo.pdf" download>Descarga CV en PDF</a>
                 </span>
             </article>
             <article class="proyectos">
@@ -53,6 +53,7 @@
                     video donde ha realizado eventos importante,
                     subir trabajos en colaboracion con otros artistas.
                     Herramienta utilizada 100% javascript y Firebase como BackEnd.
+                    <li><a href="https://github.com/enelsotillo/solo-arte">Repositary GitHub</a></li>
                     <li>Actualmente en Desarrollo para la entrega final</li>
                 </p>
 
@@ -61,7 +62,7 @@
                 </span>
             </article>
             <article class="proyectos">
-                <p>Logros se implemento un Sistema Integral ERP, 100% Java y SQLserver, alojado en servidor privado,
+                <p>Se Logro implemento un Sistema Integral ERP, 100% Java y SQLserver, alojado en servidor privado,
                     colabore como desarrollador en los modulos RRHH, Compras y conexciones con Almacen
                     <li>Se implemento una base datos con posibles candidatos, intrevista de candidatos, tipos de
                     contratación, evaluacion medica de ingreso, fichas de ingreso, acturizacion y aprobacion,
@@ -72,7 +73,7 @@
                 </p>
 
                 <span class="articuloPrincipal1">
-                    <a class="botonCv" href="https://solo-arte-app-78091.web.app/">Ver Aqui</a>
+                    <a class="botonCv" href="https://github.com/enelsotillo/ProyectoAdministrativo-v-3.0/tree/master/src/misegundoprograma">Ver Aqui</a>
                 </span>
             </article>
             <article class="proyectos">
@@ -93,7 +94,7 @@
                 </p>
 
                 <span class="articuloPrincipal1">
-                    <a class="botonCv" href="https://solo-arte-app-78091.web.app/">Ver Aqui</a>
+                    <a class="botonCv" target="_blank" href="archivos/Gerenpro/plan del proyecto Gerenpro.jpg"><img src="archivos/Gerenpro/plan del proyecto Gerenpro.jpg" alt="Proyecto" width="50" height="30">Ver Aqui</a>
                 </span>
             </article>
         </section>
@@ -113,5 +114,5 @@
         </footer>
     </main>
 </body>
-<script src="./js/main.js"></script>
+<script src="js/main.js"></script>
 </html>

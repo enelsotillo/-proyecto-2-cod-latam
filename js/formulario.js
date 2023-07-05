@@ -1,3 +1,6 @@
+//conectamos el formulario correoGmail a EmailJs
+// configuramos nuetro codigo y formulario
+// https://www.emailjs.com/docs/tutorial/adding-email-service/
 const btn = document.getElementById('button'); /* se captura el elemento submit */
 /* optiene los elemento form */
 document.getElementById('form')
